@@ -1,3 +1,5 @@
+App Url: https://play.google.com/store/apps/details?id=com.iotmetry.iotdashboard&hl=tr
+
 This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
 
 ## How to use this template
