@@ -1,1 +1,29 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu    [content]="mycontent">
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            Profil   
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+    <ion-content padding>
+        <ion-item>
+             <ion-avatar item-start>
+                <img src ="assets/img/pp.png"/>
+            </ion-avatar>
+            <ion-label stacked>{{adsoyad}}</ion-label>    
+        </ion-item>
+         <ion-item>
+            <ion-label stacked (click)="kullanim()" menuClose detail-none>Nasıl kullanılır</ion-label>
+        </ion-item>
+        <ion-item>
+             <a href="https://iothook.com/tr/">Iothook.com'u ziyaret et</a>            
+        </ion-item>
+        <ion-item>
+            <ion-label stacked (click)="cikis('3')" menuClose detail-none *ngIf="goster" >Çıkış Yap</ion-label>
+            <ion-label stacked (click)="cikis('3')" menuClose detail-none *ngIf="!goster" >Giriş Yap</ion-label>
+        </ion-item>
+  </ion-content>
+</ion-menu>
+
+<ion-nav #mycontent [root]="rootPage"></ion-nav>
