@@ -1,0 +1,81 @@
+page-home {
+
+}
+
+.toolbar-background {
+  background-color: #02b8fd;
+}
+
+.gonder
+{
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border:0px;
+    background-color: #02b8fd;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 21%;
+    display: block;
+
+}
+
+
+
+.kanallar
+{
+    float:left;
+    background-color:#0099cc;
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    margin-left:10px;
+    overflow-x: scroll;
+}
+
+.kanalmedium
+{
+    margin-top: 10px;
+    float:left;
+}
+
+
+.postekle
+{
+    width:50px;
+    height: 50px;
+    font-size: 50px;
+    margin-left:15px;
+}
+
+.kanallistelebtn
+{
+    width:100px;
+    height: 100px;
+    border-radius: 5px;
+    background-color:#02b8fd;
+    margin-top:50px;
+    margin-left:35%;
+ 
+}
+
+.nasilkullanilibtn
+{
+    width:100px;
+    height: 50px;
+    border-radius: 5px;
+    background-color:#009999;
+    margin-top:70px;
+    margin-left:35%;
+ 
+}
+
+.copkutusu
+{
+    float:left;
+    width: 50px;
+    height: 50px;
+    background-image: url('../assets/img/sil.png');
+    background-size: 100% 100%;
+}

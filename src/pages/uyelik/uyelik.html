@@ -1,0 +1,74 @@
+<!--
+  Generated template for the UyelikPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar hideBackButton = "true">
+    <ion-buttons left>
+<button ion-button (click)="geri()">
+<ion-icon ios="ios-arrow-back" md="md-arrow-back" name="arrow-back"></ion-icon>
+</button>
+</ion-buttons>
+    <ion-title>Üyelik İşlemleri</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+
+<ion-content padding>
+
+  <div style="margin-top:1%" *ngIf="uyegirisdiv" >
+  <ion-item>
+    <ion-label stacked>Kullanıcı adı/E-Posta</ion-label>
+    <ion-input  [(ngModel)]="user.usernameil" placeholder="User name/E-mail"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Şifre:</ion-label>
+    <ion-input  [(ngModel)]="user.password"  type="password" placeholder="Password"></ion-input>
+  </ion-item>
+<button class="gonder" (click)="uyegiris()"  >Giriş</button>
+<button style="float:right;margin-top:20px;width: 140px;height: 30px;background-color: pink;border-radius: 3px" (click)="uyelikislem(islem)" #islem id=1>Şifremi Unuttum</button>
+<button style="float:left;margin-top:20px;margin-left:20px;width: 140px;height: 30px;background-color: pink;border-radius: 3px"  (click)="uyelikislem(islem2)" #islem2 id=2>Üye Ol</button>
+</div>
+
+<div style="margin-top:1%" *ngIf="uyeoldiv">
+  <ion-item>
+    <ion-label stacked>Kullanıcı adı:</ion-label>
+    <ion-input  [(ngModel)]="uyelik.username"  placeholder="User name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Şifre:</ion-label>
+    <ion-input  [(ngModel)]="uyelik.password"  type="password" placeholder="Password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Şifre Tekrarı:</ion-label>
+    <ion-input   [(ngModel)]="uyelik.repassword"  type="password" placeholder="Re-Password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>E-Posta:</ion-label>
+    <ion-input  [(ngModel)]="uyelik.email"   type="email" placeholder="E-mail"></ion-input>
+  </ion-item>
+
+<button class="gonder" (click)="uyeOl()"  >Üye Ol</button>
+<button style="float:left;margin-top:20px;margin-left:20px;width: 140px;height: 30px;background-color: pink;border-radius: 3px"  (click)="uyelikislem(islem1)" #islem1 id=3>Giriş Yap</button>
+<button style="float:right;margin-top:20px;margin-left:20px;width: 140px;height: 30px;background-color: pink;border-radius: 3px" (click)="uyelikislem(islem2)" #islem2 id=1 >Şifremi Unuttum</button>
+</div>
+
+
+<div style="margin-top:1%" *ngIf="sifremiunuttumdiv">
+<ion-item>
+    <ion-label stacked>Kullanıcı adı / E-Posta:</ion-label>
+    <ion-input  [(ngModel)]="sifre.usernameil"   type="email" placeholder="Username/E-mail"></ion-input>
+  </ion-item>
+
+<button class="gonder" (click)="sifremiunuttum()"  >Şifre Gönder</button>
+<button style="float:left;margin-top:20px;margin-left:20px;width: 140px;height: 30px;background-color: pink;border-radius: 3px"  (click)="uyelikislem(islem1)" #islem1 id=2>Üye Ol</button>
+<button style="float:right;margin-top:20px;margin-left:20px;width: 140px;height: 30px;background-color: pink;border-radius: 3px" (click)="uyelikislem(islem2)" #islem2 id=3 >Giriş Yap</button>
+</div>
+
+</ion-content>

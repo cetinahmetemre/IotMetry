@@ -1,0 +1,40 @@
+<!--
+  Generated template for the GetlerPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title style="float:left">Kanal Elementleri(GET)</ion-title>
+    <div class="info" (click)="kanaldetay()"></div>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<div class="elementlerlistesi" style="" >
+  <button class="gondergetler" style="float:left" (click)="verilerigorpage()">Verileri Gör</button>
+<div><p style="float:left;margin-left:22px;font-weight:bold;font-size:20px">Elementler</p> 
+  <button class="gondergetler" (click)="elementolusturpage()"  >Element Ekle</button></div>
+<ion-list style="margin-left:-40px;">
+    <ion-item *ngFor="let ver of veriler" >
+      <div class="elementmedium" *ngIf="ver.show">
+     <div class="copkutusu" (click)="elementsil(ver.elementid,ver.id)" ></div>
+      <div class="elementler" ><p style="float:left;margin-left:5%;margin-top:15px;color:black;font-weight: bold">{{ver.elementname}}</p></div>
+       <ion-fab style="margin-left: 15px" #fab>
+        <button ion-fab class="ion-fab" [style.background-image]="getBackground(ver.gorunum)"></button>
+        <ion-fab-list side="left" >
+        <button  class="fabbuton" style="background-image: url('assets/img/termometre.png');background-size: 100% 100%" (click)="elementgorunum(termometreid,'termometre',fab,ver.id)" #termometreid id={{ver.gorunumsec}}></button>
+        <button class="fabbuton"  style="background-image: url('assets/img/lamba.png');background-size: 100% 100%" (click)="elementgorunum(lambaid,'lamba',fab,ver.id)" #lambaid id={{ver.gorunumsec}}></button>
+        </ion-fab-list>
+      </ion-fab>
+      </div>
+    </ion-item>
+  </ion-list>   
+</div>
+
+</ion-content>

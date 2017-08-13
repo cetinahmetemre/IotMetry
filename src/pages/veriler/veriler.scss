@@ -1,0 +1,48 @@
+page-veriler {
+
+}
+
+.gauge
+{
+width: auto;
+width: 250px;
+height: 250px;
+margin-left:10%;
+display:block;
+}
+
+.lamba
+{
+    margin-left:35%;
+    width: 100px;
+    height: 100px;
+    background-image: url('../assets/img/lamba.png');
+    background-size: 100% 100%;
+    display:block;
+}
+
+
+
+.verigondertext
+{
+    float:left;
+    width: 80px;
+    border-radius: 5px;
+    background-color: #fdf8e1;
+    font-size: 14px;    
+
+}
+
+.gonderbuttonveriler
+{
+   float:left;
+   width: 80px;
+   height: 20px; 
+   font-size: 12px;
+   border-radius: 5px;
+    border:0px;
+    background-color: #02b8fd;
+    font-weight: bold;
+    margin-left: 10px;  
+
+}

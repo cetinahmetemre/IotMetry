@@ -1,0 +1,30 @@
+<!--
+  Generated template for the ElementolusturPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Element Ekle</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+  <ion-item>
+  <ion-label style="color:red;" stacked >Element Adı</ion-label>
+    <ion-input  [(ngModel)]="element.adi" ></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label style="color:red;" stacked>Açıklama</ion-label>
+    <ion-input [(ngModel)]="element.aciklama" ></ion-input>
+  </ion-item>
+
+<button class="gonder" (click)="elementolustur()" >Kaydet</button>
+</ion-content>

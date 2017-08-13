@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+    Kanal Listele    
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content padding >
+<!--
+  
+  
+  <ion-item>
+    <ion-label stacked>What's your name?</ion-label>
+    <ion-input [(ngModel)]="user.username" placeholder="User name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>What's your special skill?</ion-label>
+    <ion-input [(ngModel)]="user.password" placeholder="password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>How long have you been working?</ion-label>
+    <ion-input [(ngModel)]="user.user_id" placeholder="user_id"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>How long have you been working?</ion-label>
+    <ion-input [(ngModel)]="user.token" placeholder="Token"></ion-input>
+  </ion-item>
+  <button ion-button full (click)="addUser()">Add Developer Info</button>
+ 
+  <ion-list>
+    <ion-item *ngFor="let us of users">
+      <h2>{{ us.username }}</h2>
+      <p>{{ us.password }} years of {{ us.token }} Experience! {{ us.ad }} , {{ us.soyad }}</p>
+    </ion-item>
+  </ion-list> 
+-->
+
+
+
+<button class="kanallistelebtn" *ngIf="kanallistelebtn" (click)="uyekontrol()"> Kanalları Listele </button>
+<button class="nasilkullanilibtn" *ngIf="kanallistelebtn" [navPush]="howtousePage"> Nasıl kullanılır </button>
+
+<div class="kanallarlistesi" style="" *ngIf="kanallardiv">
+  <div style="float:left;margin-bottom:20px;width: 250px;margin-top:5px">
+<h2 style="float:left;margin-left:35%;font-weight:bold;font-size:20px;margin-top:5px">KANALLAR</h2>
+<div style="float:right;background-image: url('assets/img/yenile.png'); background-size:100% 100% ; width:30px; height: 30px" (click)="kanallistele()"></div></div>
+<ion-list style="margin-left:-20px;">
+    <ion-item *ngFor="let ver of veriler" >
+      <div class="kanalmedium" *ngIf="ver.show">
+      <div class="copkutusu" (click)="kanalsil(ver.channelid,ver.channelapikey,ver.id)" ></div>
+      <div class="kanallar" (click)="getler(ver.channelid,ver.channelapikey)"><p style="float:left;margin-left:5%;margin-top:15px;color:black;font-weight: bold;" >{{ver.channelname}} </p></div>
+      <ion-icon class="postekle" ios="ios-add-circle" md="md-add-circle" (click)="verilerigorpage(ver.channelid,ver.channelapikey)"></ion-icon>
+      </div>
+    </ion-item>
+  </ion-list> 
+</div>
+
+
+</ion-content>
